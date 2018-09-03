@@ -1,0 +1,88 @@
+\documentclass[10pt]{beamer}
+
+\usepackage{polyglossia}
+\usepackage{csquotes}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{color}
+\usepackage{url}
+\usepackage[backend=biber,style=iso-authoryear,sortlocale=cs_CZ,autolang=other,bibencoding=UTF8]{biblatex}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\setdefaultlanguage{czech}
+\setotherlanguage{english}
+\setmainfont{TeX Gyre Termes}
+\usetheme{Boadilla}
+\usecolortheme{crane}
+\setbeamertemplate{section in toc}[ball unnumbered]
+\setbeamertemplate{bibliography item}{}
+\addbibresource{zotero.bib}
+
+\hypersetup{
+	pdfencoding=auto,
+	unicode=true,
+	citecolor=green,
+	filecolor=blue,
+	linkcolor=red,
+	urlcolor=blue
+}
+
+\makeatletter
+\newcommand*{\currentSection}{\@currentlabelname}
+\makeatother
+
+\title[Hluboké neuronové sítě pro problémy s hierarchií]
+{
+	Hluboké neuronové sítě pro problémy s hierarchií
+}
+
+\titlegraphic
+{
+	\includegraphics[width=0.2\columnwidth]{images/fjfi.png}
+}
+
+\author[Marek Dědič]
+{
+	Marek~Dědič\inst{1} \\
+	Školitel:~Ing.~Tomáš~Pevný,~Ph.D.\inst{2}
+}
+
+\institute[FJFI ČVUT v Praze]
+{
+	\inst{1} ČVUT v Praze, Fakulta jaderná a fyzikálně inženýrská, Matematická informatika \and
+	\inst{2} Cisco Systems Inc., Karlovo náměstí 10, Praha 2
+}
+
+\AtBeginSection[]{
+	\begin{frame}{\currentSection}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Obsah}
+	\tableofcontents
+\end{frame}
+
+% Body
+
+\begin{frame}{Seznam literatury}
+	\printbibliography
+\end{frame}
+
+\begin{frame}{Dotazy}
+	\begin{itemize}
+		\item Jsou?
+	\end{itemize}
+\end{frame}
+
+\end{document}
