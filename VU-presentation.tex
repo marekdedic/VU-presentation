@@ -83,18 +83,47 @@
 	\textit{\enquote{But is this what the brain actually does? Alas, the back-prop nets are unrealistic in almost every respect}}\footnote{\cite{crick_recent_1989}}
 \end{frame}
 
+\section{Target propagation}
+
+\begin{frame}{Dataset}
+	\centering
+	\includegraphics[width=0.55\pagewidth]{images/1407-7906.png}\footnote{\cite{bengio_how_2014}}
+\end{frame}
+
 \section{Výsledky}
-\section{Vysvětlení výsledků}
+
+\begin{frame}{Dataset}
+	\centering
+	\includegraphics[width=0.6\pagewidth]{images/two-moon/two-moon.pdf}
+\end{frame}
+
+\begin{frame}{Zpětná propagace}
+	\centering
+	\includegraphics[width=0.6\pagewidth]{images/backprop-heatmap/backprop.pdf}
+\end{frame}
+
+\begin{frame}{Target propagation}
+	\centering
+	\includegraphics[width=0.6\pagewidth]{images/relu-heatmap/relu.pdf}
+\end{frame}
+
 \section{Závěr}
+
+\begin{frame}{Závěr}
+	\begin{itemize}
+		\item Target propagation tak, jak byla implementována, není vhodnou alternativou ke zpětné propagaci.
+		\item \cite{bartunov_assessing_2018} uvádí obdobné problémy na datasetu ImageNet.
+		\item Další výzkum je třeba, zkoumající například:
+		\begin{itemize}
+			\item Vliv hyperparametrů
+			\item Dynamické hodnoty hyperparametrů
+			\item Regularizaci
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
 \begin{frame}{Seznam literatury}
 	\printbibliography
-\end{frame}
-
-\begin{frame}{Dotazy}
-	\begin{itemize}
-		\item Jsou?
-	\end{itemize}
 \end{frame}
 
 \end{document}
